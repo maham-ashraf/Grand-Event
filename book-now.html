@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Event - Grand Events</title>
+     <link rel="icon" href="Grand event place.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" style="text-decoration: none; color: inherit;">
+                    <i class="fas fa-crown"></i>
+                    <span>Grand Events</span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About Grand Events</a></li>
+                <li><a href="index.html#services">Our Services & Events</a></li>
+                <li><a href="index.html#gallery">Event Gallery</a></li>
+                <li><a href="index.html#contact">Contact Us</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Booking Section -->
+    <section class="booking" style="margin-top: 80px;">
+        <div class="container">
+            <h2 class="section-title">Book Your Event</h2>
+            <div class="booking-form-container">
+                <form id="booking-form" class="booking-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="full-name">Full Name *</label>
+                            <input type="text" id="full-name" name="fullName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="event-type">Event Type *</label>
+                            <select id="event-type" name="eventType" required>
+                                <option value="">Select Event Type</option>
+                                <option value="wedding">Wedding Event</option>
+                                <option value="corporate">Corporate Event</option>
+                                <option value="birthday">Birthday Party</option>
+                                <option value="conference">Conference</option>
+                                <option value="mehndi">Mehndi Event</option>
+                                <option value="engagement">Engagement Ceremony</option>
+                                <option value="social">Social Gathering</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="event-date">Event Date *</label>
+                            <input type="date" id="event-date" name="eventDate" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="event-time">Event Time *</label>
+                            <input type="time" id="event-time" name="eventTime" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="guests">Number of Guests</label>
+                        <input type="number" id="guests" name="guests" min="1" placeholder="Expected number of guests">
+                    </div>
+                    <div class="form-group">
+                        <label for="budget">Budget Range (PKR)</label>
+                        <select id="budget" name="budget">
+                            <option value="">Select Budget Range</option>
+                            <option value="50000-100000">50,000 - 100,000 PKR</option>
+                            <option value="100000-200000">100,000 - 200,000 PKR</option>
+                            <option value="200000-500000">200,000 - 500,000 PKR</option>
+                            <option value="500000+">500,000+ PKR</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Additional Message</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Tell us more about your event..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary btn-full"><span>Submit Booking Request</span></button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-crown"></i>
+                        <span>Grand Events</span>
+                    </div>
+                    <p>Making your events grand and memorable since 2008. Your trusted partner for exceptional event experiences in Faisalabad.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="book-now.html">Book Now</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="index.html#services">Wedding Events</a></li>
+                        <li><a href="index.html#services">Corporate Events</a></li>
+                        <li><a href="index.html#services">Mehndi Events</a></li>
+                        <li><a href="index.html#services">Social Gatherings</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Grand Events. All rights reserved. | Serving Faisalabad and surrounding areas | Designed with <i class="fas fa-heart"></i> for memorable events</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Availability - Grand Events</title>
+   <link rel="icon" href="Grand event place.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" style="text-decoration: none; color: inherit;">
+                    <i class="fas fa-crown"></i>
+                    <span>Grand Events</span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About Grand Events</a></li>
+                <li><a href="index.html#services">Our Services & Events</a></li>
+                <li><a href="index.html#gallery">Event Gallery</a></li>
+                <li><a href="index.html#contact">Contact Us</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Availability Checker Section -->
+    <section class="availability" style="margin-top: 80px;">
+        <div class="container">
+            <h2 class="section-title">Check Availability</h2>
+            <div class="availability-content">
+                <div class="availability-form">
+                    <div class="form-group">
+                        <label for="check-date">Select Date</label>
+                        <input type="date" id="check-date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="check-time">Select Time</label>
+                        <select id="check-time">
+                            <option value="">Select a time</option>
+                            <option value="morning">Morning (9:00 AM - 12:00 PM)</option>
+                            <option value="afternoon">Afternoon (12:00 PM - 5:00 PM)</option>
+                            <option value="evening">Evening (5:00 PM - 10:00 PM)</option>
+                            <option value="fullday">Full Day</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="event-type">Event Type</label>
+                        <select id="event-type">
+                            <option value="">Select Event Type</option>
+                            <option value="wedding">Wedding Event</option>
+                            <option value="corporate">Corporate Event</option>
+                            <option value="birthday">Birthday Party</option>
+                            <option value="conference">Conference</option>
+                            <option value="mehndi">Mehndi Event</option>
+                            <option value="engagement">Engagement Ceremony</option>
+                            <option value="social">Social Gathering</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="guests">Expected Guests</label>
+                        <input type="number" id="guests" min="1" placeholder="Number of guests">
+                    </div>
+                    <button type="button" onclick="checkAvailability()" class="btn-primary"><span>Check Availability</span></button>
+                </div>
+                <div id="availability-result" class="availability-result" style="display: none;">
+                    <!-- Results will be displayed here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Information Section -->
+    <section class="about">
+        <div class="container">
+            <h2 class="section-title">Venue Information</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Grand Events Marquee - Faisalabad</h3>
+                    <p>Our premium event venue is located in the heart of Faisalabad, offering state-of-the-art facilities for all types of events. We provide:</p>
+                    <ul style="color: var(--text-light); line-height: 1.8;">
+                        <li>Spacious indoor and outdoor venues</li>
+                        <li>Modern decoration and lighting systems</li>
+                        <li>Professional sound and stage setup</li>
+                        <li>Catering services with traditional and continental cuisine</li>
+                        <li>Ample parking space for 500+ vehicles</li>
+                        <li>24/7 power backup and security</li>
+                        <li>Dedicated event management team</li>
+                    </ul>
+                    <p style="margin-top: 1rem;"><strong>Operating Hours:</strong> 9:00 AM - 11:00 PM daily</p>
+                    <p><strong>Advance Booking:</strong> Recommended 2-4 weeks for weekends</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-crown"></i>
+                        <span>Grand Events</span>
+                    </div>
+                    <p>Making your events grand and memorable since 2008. Your trusted partner for exceptional event experiences in Faisalabad.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="book-now.html">Book Now</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="index.html#services">Wedding Events</a></li>
+                        <li><a href="index.html#services">Corporate Events</a></li>
+                        <li><a href="index.html#services">Mehndi Events</a></li>
+                        <li><a href="index.html#services">Social Gatherings</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Grand Events. All rights reserved. | Serving Faisalabad and surrounding areas | Designed with <i class="fas fa-heart"></i> for memorable events</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
